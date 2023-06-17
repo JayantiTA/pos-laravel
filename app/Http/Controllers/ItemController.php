@@ -35,7 +35,7 @@ class ItemController extends Controller
 
     public function deleteItem($id)
     {
-        session()->forget('items' . $id);
+        session()->forget('items.' . $id);
         return redirect('/home')->with('status', [
             'message' => 'Item deleted from cart'
         ]);

@@ -29,7 +29,7 @@
         </div>
     </div>
     <div>
-        @if (session()->has('items'))
+        @if (session()->has('items') && count(session()->get('items')) > 0)
         {{-- create table --}}
         <table class="my-4 table table-bordered align-middle text-center">
             <thead>
